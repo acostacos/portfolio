@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn with Tacos</title>
+
+    <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+</head>
+<body class="bg-black">
+    <div id="nav" class="w-full flex justify-center items-center py-5">
+        <div class="w-4/5 flex justify-around">
+            <a class="text-white" href="{% url 'info:index' %}">Home</a>
+            <a class="text-white" href="/">Blog</a>
+            <a class="text-white" href="/">Projects</a>
+            <a class="text-white" href="{% url 'info:about' %}">About</a>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
