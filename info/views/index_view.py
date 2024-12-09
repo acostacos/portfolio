@@ -6,5 +6,8 @@ class IndexView(View):
     template_name = 'info/index.html'
 
     def get(self, request):
-        context = {}
+        header = 'Learn with Tacos'
+        subheader = 'Machine Learning | Software Engineering'
+        image_url = 'images/brain.png'
+        context = {'header': header, 'subheader': subheader, 'image_url': image_url}
         return render(request, self.template_name, context)

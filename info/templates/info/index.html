@@ -2,16 +2,16 @@
 {% load static %}
 
 {% block content %}
-    <div id="content" class="w-full flex justify-center items-center">
+    <div id="content" class="w-full h-screen flex justify-center items-center">
         <div class="w-4/5 flex">
             <div class="w-1/2 p-5 flex justify-center items-center">
                 <div>
-                    <h1 class="text-7xl font-semibold text-white">Learn with Tacos</h1>
-                    <p class="text-white pt-5">Machine Learning | Software Engineering</p>
+                    <h1 class="text-7xl font-semibold text-white">{{ header }}</h1>
+                    <p class="text-white pt-5">{{ subheader }}</p>
                 </div>
             </div>
             <div class="w-1/2 p-5 flex justify-center items-center">
-                <img src="{% static 'images/brain.png' %}" alt="header image" />
+                <img src="{% static image_url %}" alt="Cartoon brain lifting weights" />
             </div>
         </div>
     </div>
